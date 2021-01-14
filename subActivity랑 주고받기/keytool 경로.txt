@@ -1,9 +1,0 @@
-C:/Users/user/AppData/Local/Google/AndroidStudio4.1/tasks
-keytool -storepasswd -keystore cacerts
-
-출처: https://mydevromance.tistory.com/45 [My Dev Romance]
-
-
-
-
-keytool -import -noprompt -trustcacerts -alias aliasname -file "C:\Users\user\Downloads\KOLON_SSL인증서\KOLON.crt" -keystore "C:\Program Files\Android\Android Studio\jre\jre\lib\security\cacerts" -storepass changeit
