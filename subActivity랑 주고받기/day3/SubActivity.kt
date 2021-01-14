@@ -14,6 +14,7 @@ class SubActivity : AppCompatActivity() {
     lateinit var text2 : TextView
     lateinit var editText2 : EditText
     lateinit var returnButton : Button
+    lateinit var clearButton:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sub)
@@ -25,11 +26,16 @@ class SubActivity : AppCompatActivity() {
             setResult(Activity.RESULT_OK,returnIntent)
             finish()
         }
+        clearButton.setOnClickListener{
+            //editText2.setText(null)
+            editText2.text=null
+        }
 
     }
     fun init(){
         text2 = findViewById(R.id.text_2)
         editText2 = findViewById(R.id.edit_2)
         returnButton = findViewById(R.id.return_btn)
+        clearButton = findViewById(R.id.clear_btn)
     }
 }

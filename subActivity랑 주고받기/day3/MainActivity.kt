@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var editText:EditText
     lateinit var returnText:TextView
     lateinit var main_intent:Intent
+    lateinit var clearButton:Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         toastBtn.setOnClickListener(this)
         nextPageBtn.setOnClickListener(this)
-
+        clearButton.setOnClickListener(this)
 
     }
     fun init(){
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         nextPageBtn = findViewById(R.id.next_btn)
         editText=findViewById(R.id.edit_1)
         returnText=findViewById(R.id.return_text)
+        clearButton=findViewById(R.id.clear_btn)
     }
 
     override fun onClick(v: View?) {
@@ -50,6 +52,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.next_btn->{
                 main_intent.putExtra("from11",editText.text.toString())
                 startActivityForResult(main_intent,99)
+            }
+            R.id.clear_btn->{
+                editText.setText(null)
+
             }
         }
     }
