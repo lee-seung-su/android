@@ -1,0 +1,41 @@
+main에서 frame_layout설정 : main의 어디에 view가 보여질지 설정
+
+MainActivity.kt에서  setFragment같은 함수만들어서 -> 초기에 보여지게하려면 setFragment onCreate에서 호출
+val tt : TestFragment = TestFragment() // 넘어갈 fragment객체생성해서 변수에 저장
+val trans = supportFragmentManager.beginTransaction()  //transaction변수 설정
+trans.add(R.id.main_frame_layout, tt) //변수에 fragment넣고
+trans.commit() // commit
+
+goNext(){
+val next_page = Result()  //마찬가지로 넘어갈변수 설정
+        val trans = supportFragmentManager.beginTransaction()  
+        trans.add(R.id.main_frame_layout,next_page)
+        trans.addToBackStack("result")  //백스택에 저장
+        trans.commit()
+}
+
+fun goBack(){  //뒤로가기
+        onBackPressed()
+
+    }
+
+각 fragment.kt파일에서
+var mainActivity: MainActivity? = null // main의 함수 호출하기위해 mainactivity객체 생성
+
+override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mainActivity = context as MainActivity  //mainActivity객체 초기화
+    }
+
+override fun onCreateView(  //fragment는 여기가 Activity의 onCreate와 같다
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        val view = inflater.inflate(R.layout.fragment_test, container, false)
+        var button: Button = view.findViewById(R.id.fragment_next_button)  //버튼리스너만들어서
+        button.setOnClickListener {
+            mainActivity?.goNext()  //mainActivity객체로 내부 goNext()함수 호출
+        }
+        return view  //view반환. view가뭐지??
+    }
