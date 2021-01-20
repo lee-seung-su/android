@@ -17,7 +17,8 @@ val alert : AlertDialog.Builder = AlertDialog.Builder(holder.itemView.context)
 - activity는 ui전체 / view는 위젯, 레이아웃, 등을 다 view라 하는데 이러한 view들을 activity위에다가 얹는 방식이다.
 context는 이러한 activity의 기본적인 정보들을 다 가지고있는 class라 생각하면된다.
 
-- data class랑 class의 차이는 data class는 변수만 들어갈 수 있다. 단, 이러한 변수들에대해 기본적인 setter, getter 그냥 쓸 수 있다
+- data class랑 class의 차이는 data class는 변수만 들어갈 수 있다. 단, 이러한 변수들에대해 기본적인 setter, getter 그냥 쓸 수 있다(실제로 getter, setter x but 내부적으로
+getter, setter쓰는거다)
 
 - 프로젝트 시작하면 맨처음에 build.gradle에서 implementation material부분 지우고해야된다.(중간에 지우면 안됨) 
 
