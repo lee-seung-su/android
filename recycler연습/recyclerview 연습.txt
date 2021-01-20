@@ -1,0 +1,22 @@
+val alert : AlertDialog.Builder = AlertDialog.Builder(holder.itemView.context)
+            alert.setTitle("진짜 삭제할꺼?")
+            alert.setNegativeButton("응", DialogInterface.OnClickListener{
+                dialog, which -> data.removeAt(position)
+                this.notifyDataSetChanged()
+                itemNum.text = "현재 ${data.size}명"
+            })
+            alert.setPositiveButton("아니",null)
+            alert.show()
+
+- alert는 alertDialog.Builder로 만든다음에 각 값 set하면 된다
+(버튼은 중립, 부정, 긍정 순서로 배치된다)
+
+- item모두에 대해서 button의 visibility바꾸고싶으면 data class(value object)에 boolean값을 넣어서 이값으로 visibilty 판단해야된다
+ㄴ 안그러면 현재 어디를 보는지 adapter는 잘 모르기떄문?
+
+- activity는 ui전체 / view는 위젯, 레이아웃, 등을 다 view라 하는데 이러한 view들을 activity위에다가 얹는 방식이다.
+context는 이러한 activity의 기본적인 정보들을 다 가지고있는 class라 생각하면된다.
+
+- data class랑 class의 차이는 data class는 변수만 들어갈 수 있다. 단, 이러한 변수들에대해 기본적인 setter, getter 그냥 쓸 수 있다
+
+- 프로젝트 시작하면 맨처음에 build.gradle에서 implementation material부분 지우고해야된다.(중간에 지우면 안됨) 
