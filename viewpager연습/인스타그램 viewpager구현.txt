@@ -1,0 +1,17 @@
+인스타그램 사진 viewpager만드는방법
+자동으로 외부 viewpager, 내부 viewpager focus처리를 해주므로 그냥 사용하면된다.
+
+우선 인스타그램 내부피드에 recyclerview만든다음
+이 recyclerview에 들어갈 item_list만든다
+이 item_list와 연결될 data class만든다
+recyclerview와 연결될 Instagram_recyclerview_adapter 클래스를 만든다
+(여기서 listen()처리 어떻게해주지?)
+Instagram_recyclerview_adapter의 generic인 InstaHolder클래스를 만든다
+InstaHolder클래스의 setData부분에서 viewpager와 연결될 adapter를 만들어준다.
+해당 adapter에 data set해준다음 연결해주고, 해당 adapter를 최종 recyclerview의 adapter와 연결해준다
+즉 원래                              adapter = instagramAdapter() // viewpager와 관련된 adapter
+                                        viewpager.adapter = 위의 adapter  // viewpager와 adapter연결
+ Instaholder클래스에서          RecyclerView.adapter = viewpager.adapter // recycler의 adapter와 연결 
+
+이때 Instagram.kt에서 초기 adapter data를 loadInstagramData로 초기화해주는데
+모르는값은 null처리해서 일단 객체생성하고 setData에서 변경해주면된다.
