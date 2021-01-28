@@ -1,0 +1,50 @@
+fragment로 viewpager만드는경우에는 그냥 fragment객체 넘겨주면되는데
+view로 viewpager만들려면
+view layout을 먼저 만든다음
+해당 view와 연결되는 클래스들을 만들어준다
+해당 클래스 초기화부분에서 해당 view layout을 LayoutInflater로 객체화시킨다음에
+addView에 view객체 넣어주면된다.
+init{
+        val view = LayoutInflater.from(context).inflate(R.layout.image2, this, false)
+        addView(view)
+    }
+
+인스타처럼 viewpager내부에 viewpager구현하고싶은경우
+자동으로 내부 viewpager에 focus맞춰지므로 따로 설정해줄 필요x
+
+webview쓸떄는 webClient써야한다
+webview쓸떄 맨처음에 링크가 안열릴 수 있다
+그러면 manifest들어가서 application에
+android:usesCleartextTraffic="true"써줘야한다
+
+edittext입력할때 키보드에 입력창이 가려지는 경우
+manifest에서 activity안에 
+android:windowSoftInputMode="adjustPan"써주면
+자동으로 edittext윗부분이 올라간다
+
+인터넷 쓸떄도 권한설정해줘야한다
+Uri로 데이터보낼떄 call, dial같은경우는 "tel:010~"이렇게 tel써줘야하고
+Sms같은경우엔 "smsto:010~"이렇게 smsto써줘야한다
+
+그림파일이 너무커서 뭐 에러나는경우에는
+drawable에 drawable-xhdpi폴더 만든다음에
+직접 drawable-xhdpi폴더에 큰 이미지 넣어줘야한다(android프로젝트로 보면
+아마 drawable-xhdpi폴더 안보이고 이미지옆에 괄호로 어디폴더에 저장되어있는지만
+보일거다
+
+인스타 viewpager구현같은경우에는
+우선 데이터를 만들어서 adapter에 넣어줘야하는데 프로필이미지나, 그림같은경우는 그냥 null로 해주고
+나중에 어댑터안에서 setdata해줄때 다시 초기화해주면된다
+그다음 adapter데이터에 set한 데이터 만든다음 Instagram_recyclerview_adapter에 붙여준다
+Instagram_recyclerview_adapter에서는 
+onBindViewHolder의 setdata를 해줄때
+holdr클래스의 setdata를 호출하게되는데
+여기에서 InstagramAdater(그림넘기기용 adapter)를 생성해준다
+그다음 InstagramAdapter의 데이터에 view들 객체 만들어서 넘겨준 다음에
+var adapter = InstagramAdapter()
+            adapter.views = listOf(
+                CustomImage1(itemView.context), CustomImage2(itemView.context), CustomImage3(itemView.context), CustomImage4(itemView.context)
+            )
+그다음에 이미지(viewpager타입)의 adapter에 해당 adapter연결해주면된다
+
+
