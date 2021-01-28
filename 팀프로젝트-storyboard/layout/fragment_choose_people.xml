@@ -2,15 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Identify">
+    tools:context=".ChoosePeople">
 
     <TextView
         android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="당신은 누구입니까?"
+        android:text="누구를 알고싶나요?"
         android:textSize="30dp"
         android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
@@ -20,7 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
         >
         <Spinner
             android:background="@color/green"
@@ -29,7 +28,7 @@
             android:layout_marginTop="30dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:id="@+id/who_am_i_spinner"
+            android:id="@+id/choose_people_spinner"
             />
         <Button
             android:layout_marginLeft="40dp"
@@ -37,9 +36,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:text="Enter"
-            android:id="@+id/who_am_i_enter_button"
+            android:id="@+id/choose_people_enter_button"
             />
     </LinearLayout>
-
 
 </LinearLayout>

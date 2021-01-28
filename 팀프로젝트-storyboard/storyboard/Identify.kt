@@ -26,12 +26,6 @@ class Identify : Fragment() {
     lateinit var whoAmIadapter : ArrayAdapter<String>
     lateinit var whoAmIEnterButton : Button
 
-    lateinit var choosePeopleSpinner : Spinner
-    lateinit var choosePeopleEnterButton : Button
-    lateinit var choosePeopleData : MutableList<String>
-    lateinit var choosePeopleadapter : ArrayAdapter<String>
-    var choosePeopleFlag = 0
-
     var whoAmIFlag=0
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -41,7 +35,7 @@ class Identify : Fragment() {
         var view = inflater.inflate(R.layout.fragment_identify, container, false)
         init(view)
         whoAmIEnterButton.setOnClickListener{
-            if((choosePeopleFlag == 1) && (whoAmIFlag == 1)){
+            if(whoAmIFlag == 1){
                 var next = SelectMenu()
                 var trans = mainActivity!!.supportFragmentManager.beginTransaction()
                 trans.add(R.id.frame_layout, next)
@@ -81,47 +75,7 @@ class Identify : Fragment() {
             }
 
         }
-        choosePeopleEnterButton.setOnClickListener{
-            if((choosePeopleFlag==1) && (whoAmIFlag == 1)){
-                var next = SelectMenu()
-                var trans = mainActivity!!.supportFragmentManager.beginTransaction()
-                trans.hide(this)
-                trans.add(R.id.frame_layout, next)
-                trans.addToBackStack("Choose Person")
-                trans.commit()
-            }
-            else {
-                if (choosePeopleFlag == 1) {
-                    var toast = Toast.makeText(mainActivity as Context, "누구십니까!!", Toast.LENGTH_SHORT)
-                    toast.setGravity(Gravity.CENTER_VERTICAL,0,0)
-                    toast.show()
-                } else {
-                    var toast = Toast.makeText(mainActivity as Context, "누가 궁금한가요??", Toast.LENGTH_SHORT)
-                    toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0)
-                    toast.show()
-                }
-            }
-        }
-        choosePeopleSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                if(position !=0){
-                    choosePeopleFlag = 1
-                }
-                else{
-                    choosePeopleFlag = 0
-                }
-            }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-
-        }
         return view
     }
 
@@ -132,11 +86,7 @@ class Identify : Fragment() {
         whoAmIadapter = ArrayAdapter<String>(mainActivity as Context, android.R.layout.simple_list_item_1, whoAmIData)
         whoAmISpinner.adapter = whoAmIadapter
 
-        choosePeopleSpinner = view.findViewById(R.id.choose_people_spinner)
-        choosePeopleData = mutableListOf("--선택하세요--","1111","2222","3333","4444","5555")
-        choosePeopleadapter = ArrayAdapter<String>(mainActivity as Context, android.R.layout.simple_list_item_1, choosePeopleData)
-        choosePeopleSpinner.adapter = choosePeopleadapter
-        choosePeopleEnterButton = view.findViewById(R.id.choose_people_enter_button)
+
     }
 
     override fun onAttach(context: Context) {

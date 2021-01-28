@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import org.apache.poi.ss.formula.functions.Choose
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,7 +63,7 @@ class QuizResult : Fragment(),View.OnClickListener {
                 trans.commit()
             }
             R.id.another_person_button ->{
-                var next = Identify()
+                var next = ChoosePeople()
                 var trans = mainActivity!!.supportFragmentManager.beginTransaction()
                 trans.hide(this)
                 trans.add(R.id.frame_layout,next)

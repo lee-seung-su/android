@@ -53,7 +53,7 @@ class SelectMenu : Fragment(), View.OnClickListener {
         var id = v?.id
         when(id){
             R.id.quiz_button ->{
-                var next : QuizStart = QuizStart()
+                var next : ChoosePeople = ChoosePeople()
                 var trans = mainactivity!!.supportFragmentManager.beginTransaction()
                 trans.add(R.id.frame_layout, next)
                 trans.addToBackStack("select")
