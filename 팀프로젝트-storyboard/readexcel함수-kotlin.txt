@@ -1,0 +1,27 @@
+fun readExcelFileFromAssets(filePath : String) {
+        try {
+            val myInput: InputStream
+            // assetManager 초기 설정
+            val assetManager = assets
+            //  엑셀 시트 열기
+
+            myInput = assetManager.open(filePath)
+            // POI File System 객체 만들기
+
+            var workbook : XSSFWorkbook = XSSFWorkbook(myInput)
+            var sheet : XSSFSheet = workbook.getSheetAt(0)
+
+            var rows = sheet.physicalNumberOfRows
+            for(rowindex in 1..rows-1){
+                var row : XSSFRow = sheet.getRow(rowindex)
+                var cells : Int = row.physicalNumberOfCells
+                for(columnindex in 0..cells-1){
+                    var cell : XSSFCell = row.getCell(columnindex)
+                    Log.d("#############","$cell")
+                }
+            }
+
+        }catch(e:Exception){
+            Log.d("###############","에러")
+        }
+    }
