@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".Similarity">
+
+   <TextView
+       android:textColor="@color/black"
+       android:layout_width="wrap_content"
+       android:layout_height="match_parent"
+       android:id="@+id/similarity_title"
+       android:text="  당신과 가장\n비슷한 사람은"
+       android:textSize="50dp"
+       android:textStyle="bold"
+       android:layout_gravity="center_horizontal"
+       />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/similarity_image"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/similarity_detail_text"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="처음으로"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:id="@+id/similarity_home_button"
+        android:paddingBottom="20dp"
+        />
+
+</LinearLayout>
