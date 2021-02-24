@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -28,7 +30,7 @@ class QuizType2 : Fragment() {
     lateinit var answerEdit : EditText
     lateinit var enterButton : Button
     var mainActivity : MainActivity ?= null
-
+    lateinit var inputMethodManager : InputMethodManager
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,6 +41,7 @@ class QuizType2 : Fragment() {
         var quizIndText: TextView = mainActivity!!.findViewById(R.id.ind_total_text)
         quizIndText.text = "${mainActivity!!.quizInd}/${mainActivity!!.quizTotal}"
         enterButton.setOnClickListener{
+            inputMethodManager.hideSoftInputFromWindow(answerEdit.windowToken, 0)
             if(answerEdit.text.toString() !=""){
                 if(mainActivity!!.quizInd >= mainActivity!!.quizTotal){
                     var next = QuizResult()
@@ -77,6 +80,56 @@ class QuizType2 : Fragment() {
                 toast.show()
             }
         }
+        answerEdit.setOnEditorActionListener{textview, action, event ->
+            if(action == EditorInfo.IME_ACTION_DONE){
+                val inputMethodManager = mainActivity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                inputMethodManager.hideSoftInputFromWindow(answerEdit.windowToken, 0)
+                if(answerEdit.text.toString() !=""){
+                    if(mainActivity!!.quizInd >= mainActivity!!.quizTotal){
+                        var next = QuizResult()
+                        var trans = mainActivity!!.supportFragmentManager.beginTransaction()
+                        trans.add(R.id.frame_layout,next)
+                        trans.hide(this)
+                        trans.addToBackStack("quiz${mainActivity!!.quizInd}")
+                        trans.commit()
+                    }
+                    else {
+                        var i = Random.nextInt(2)
+                        if (i == 0) {
+                            var next = QuizType1()
+                            var trans = mainActivity!!.supportFragmentManager.beginTransaction()
+                            trans.add(R.id.frame_layout, next)
+                            trans.hide(this)
+                            trans.addToBackStack("quiz${mainActivity!!.quizInd}")
+                            mainActivity!!.quizInd++
+
+                            trans.commit()
+                        } else {
+                            var next = QuizType2()
+                            var trans = mainActivity!!.supportFragmentManager.beginTransaction()
+                            trans.add(R.id.frame_layout, next)
+                            trans.hide(this)
+                            trans.addToBackStack("quiz${mainActivity!!.quizInd}")
+                            mainActivity!!.quizInd++
+
+                            trans.commit()
+                        }
+                    }
+                }
+                else{
+                    var toast = Toast.makeText(mainActivity, "답을 입력하세요", Toast.LENGTH_SHORT)
+                    toast.setGravity(Gravity.CENTER_VERTICAL, 0,0)
+                    toast.show()
+                }
+            }
+            else{
+                var toast = Toast.makeText(mainActivity, "답을 입력하세요", Toast.LENGTH_SHORT)
+                toast.setGravity(Gravity.CENTER_VERTICAL, 0,0)
+                toast.show()
+            }
+            true
+        }
+
         return view
     }
     fun init(view : View){
@@ -92,5 +145,6 @@ class QuizType2 : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mainActivity = context as MainActivity
+        inputMethodManager = mainActivity!!.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
     }
 }

@@ -19,10 +19,11 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SelectMenu : Fragment(), View.OnClickListener {
+    lateinit var introButton : Button
     lateinit var quizButton : Button
-    lateinit var worldCupButton : Button
-    lateinit var todayMatchButton : Button
-    lateinit var similarityButton : Button
+    lateinit var tendencyButton : Button
+    lateinit var fightingMessageButton : Button
+    lateinit var checkSimilarityButton : Button
     var mainactivity : MainActivity ?= null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,39 +37,53 @@ class SelectMenu : Fragment(), View.OnClickListener {
         return view
     }
     fun init(view : View){
+        introButton = view.findViewById(R.id.intro_button)
         quizButton = view.findViewById(R.id.quiz_button)
-        worldCupButton = view.findViewById(R.id.game_worldcup)
-        todayMatchButton = view.findViewById(R.id.today_match_button)
-        similarityButton = view.findViewById(R.id.similarity_button)
+        tendencyButton = view.findViewById(R.id.tendency)
+        fightingMessageButton = view.findViewById(R.id.fighting_message_button)
+        checkSimilarityButton = view.findViewById(R.id.check_similarity_button)
 
     }
     fun listen(){
+        introButton.setOnClickListener(this)
         quizButton.setOnClickListener(this)
-        worldCupButton.setOnClickListener(this)
-        todayMatchButton.setOnClickListener(this)
-        similarityButton.setOnClickListener(this)
+        tendencyButton.setOnClickListener(this)
+        fightingMessageButton.setOnClickListener(this)
+        checkSimilarityButton.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         var id = v?.id
         when(id){
+            R.id.intro_button ->{
+                var next : Intro = Intro()
+                var trans = mainactivity!!.supportFragmentManager.beginTransaction()
+                trans.add(R.id.frame_layout, next)
+                trans.addToBackStack("select")
+                trans.hide(this)
+                trans.commit()
+            }
             R.id.quiz_button ->{
-                var next : ChoosePeople = ChoosePeople()
+                var next : QuizStart = QuizStart()
                 var trans = mainactivity!!.supportFragmentManager.beginTransaction()
                 trans.add(R.id.frame_layout, next)
                 trans.addToBackStack("select")
+                mainactivity!!.quizFlag = 1
+                mainactivity!!.tendencyFlag = 0
                 trans.hide(this)
                 trans.commit()
             }
-            R.id.game_worldcup ->{
-                var next : WorldCupStart = WorldCupStart()
+            R.id.tendency ->{
+                var next : CheckTendency = CheckTendency()
                 var trans = mainactivity!!.supportFragmentManager.beginTransaction()
                 trans.add(R.id.frame_layout, next)
                 trans.addToBackStack("select")
+                mainactivity!!.quizFlag = 0
+                mainactivity!!.tendencyFlag = 1
                 trans.hide(this)
                 trans.commit()
             }
-            R.id.today_match_button ->{
+            R.id.fighting_message_button ->{
                 var next : TodayMatch = TodayMatch()
                 var trans = mainactivity!!.supportFragmentManager.beginTransaction()
                 trans.add(R.id.frame_layout, next)
@@ -76,14 +91,16 @@ class SelectMenu : Fragment(), View.OnClickListener {
                 trans.hide(this)
                 trans.commit()
             }
-            R.id.similarity_button ->{
-                var next : Similarity = Similarity()
+            R.id.check_similarity_button ->{
+                var next : CheckTendency = CheckTendency()
+                //var next : CheckTendency = CheckTendency()
                 var trans = mainactivity!!.supportFragmentManager.beginTransaction()
                 trans.add(R.id.frame_layout, next)
                 trans.addToBackStack("select")
                 trans.hide(this)
                 trans.commit()
             }
+
         }
     }
 

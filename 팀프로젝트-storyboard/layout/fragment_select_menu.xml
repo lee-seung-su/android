@@ -8,40 +8,52 @@
     tools:context=".SelectMenu">
 
     <Button
-        android:id="@+id/quiz_button"
-        android:layout_width="285dp"
+        android:id="@+id/intro_button"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="Quiz"
+        android:text="소개글 보러가기"
         android:textSize="30dp" />
+
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이상형 월드컵"
-        android:textSize="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:id="@+id/game_worldcup"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:text="오늘 궁합"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:id="@+id/today_match_button"
-        />
-    <Button
+        android:id="@+id/tendency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:text="비슷한 성향"
+        android:text="성향 보러가기"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/quiz_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="퀴즈 풀러가기"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/check_similarity_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="나와 잘 맞는 정도"
         android:textSize="30dp"
-        android:id="@+id/similarity_button"
+
         />
+
+    <Button
+        android:id="@+id/fighting_message_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="응원 한마디"
+        android:textSize="30dp" />
 
 
 </LinearLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".TendencyResult">
+
+    <ProgressBar
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="103dp"
+        android:id="@+id/tendency_progressbar"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/tendency_wait_text"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="잠시만 기다려주세요"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        android:id="@+id/tendency_result_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        />
+    <TextView
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        android:id="@+id/tendency_result_detail"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        />
+    <ImageView
+        android:visibility="invisible"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/tendency_result_famous_image"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        >
+        <Button
+            android:visibility="invisible"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="다시하기"
+            android:id="@+id/tendency_test_again_button"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp"
+            />
+        <Button
+            android:visibility="invisible"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="저장하기"
+            android:id="@+id/tendency_result_save_button"
+            android:textSize="25dp"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

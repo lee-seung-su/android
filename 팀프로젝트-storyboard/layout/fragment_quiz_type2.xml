@@ -24,6 +24,7 @@
         android:layout_marginLeft="20dp"
         android:orientation="horizontal">
         <EditText
+            android:inputType="text"
             android:layout_gravity="center_vertical"
             android:background="@color/green"
             android:textColor="@color/black"

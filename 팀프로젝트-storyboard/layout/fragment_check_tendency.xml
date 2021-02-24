@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".CheckTendency">
+
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="@color/black"
+        android:text="검사는 총 20문제로 \n2분정도 소요될 예정입니다\n자신 mbti유형을 아시는 분은 \n하단의 입력창에 입력하시고\n검사를 종료하셔도 됩니다" />
+    <EditText
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="mbti성향을 아시면 작성해주세요"
+        android:id="@+id/fill_in_mbti_text"
+        />
+    <Button
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="mbti유형 입력하기"
+        android:id="@+id/enter_mbti_button"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="본 검사는 정확하지 않으므로 \n참고용으로만 봐주시기 바랍니다"
+        android:textColor="@color/black"
+        />
+    <Button
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="검사 시작하기"
+        android:id="@+id/start_mbti_button"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+</LinearLayout>

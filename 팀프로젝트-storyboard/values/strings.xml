@@ -1,0 +1,127 @@
+<resources>
+    <string name="app_name">나!누구게~</string>
+    <string name="title_activity_select__menu">Select_Menu</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+    <string name="title_activity_select_menu">SelectMenu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ei_num1_title">한개 골라주세요        (1/20)</string>
+    <string name="ei_num1_string1">나는 여러 친구들과 \n많이 사귀는 편이다</string>
+    <string name="ei_num1_string2">나는 몇 명의 친구들과 \n깊이 사귀는 편이다</string>
+
+    <string name="ei_num2_title">한개 골라주세요        (2/20)</string>
+    <string name="ei_num2_string1">처음 보는 친구들을 만나면 내가 먼저 말한다</string>
+    <string name="ei_num2_string2">처음 보는 친구들을 만나면 다른 친구가 먼저 말한다</string>
+
+    <string name="ei_num3_title">한개 골라주세요        (3/20)</string>
+    <string name="ei_num3_string1">나의 생각이나 느낌을 다른 사람에게 이야기하는 편이다</string>
+    <string name="ei_num3_string2">나의 생각이나 느낌을 \n혼자 간직하는 편이다</string>
+
+    <string name="ei_num4_title">한개 골라주세요        (4/20)</string>
+    <string name="ei_num4_string1">나는 나의 생각과 느낌을 \n말로 표현하는 것이 편하다</string>
+    <string name="ei_num4_string2">나는 나의 생각과 느낌을 \n글로 표현하는 것이 편하다</string>
+
+    <string name="ei_num5_title">한개 골라주세요        (5/20)</string>
+    <string name="ei_num5_string1">주위 사람들은 내가 \n활발하다고 한다</string>
+    <string name="ei_num5_string2">주위 사람들은 내가 \n얌전하다고 한다</string>
+
+    <string name="jp_num1_title">한개 골라주세요        (16/20)</string>
+    <string name="jp_num1_string1">나는 내가 직접 경험한 것을 얘기하는 것을 좋아한다</string>
+    <string name="jp_num1_string2">나는 내가 상상한 것을 이야기하는 것을 좋아한다</string>
+
+    <string name="jp_num2_title">한개 골라주세요        (17/20)</string>
+    <string name="jp_num2_string1">나는 그려진 그림에 \n색칠하기를 좋아한다</string>
+    <string name="jp_num2_string2">나는 이야기 \n지어내기를 좋아한다</string>
+
+    <string name="jp_num3_title">한개 골라주세요        (18/20)</string>
+    <string name="jp_num3_string1">나는 배운대로 하는 편이다</string>
+    <string name="jp_num3_string2">나는 나만의 방법을 \n만들어서 하는 편이다</string>
+
+    <string name="jp_num4_title">한개 골라주세요        (19/20)</string>
+    <string name="jp_num4_string1">내가 좋아하는 책은 \n읽은 것이라도 또 읽는다</string>
+    <string name="jp_num4_string2">나는 새로운 다른 책을 \n읽는 것이 좋다</string>
+
+    <string name="jp_num5_title">한개 골라주세요        (20/20)</string>
+    <string name="jp_num5_string1">나는 실제에 바탕을 둔 \n이야기를 좋아한다</string>
+    <string name="jp_num5_string2">나는 상상으로 지어낸 \n이야기를 좋아한다</string>
+
+    <string name="sn_num1_title">한개 골라주세요        (6/20)</string>
+    <string name="sn_num1_string1">우리 편이 지면 다음 번에는 이기도록 계획한다</string>
+    <string name="sn_num1_string2">우리 편이 지면 ‘다음엔 이기자’로 친구들을 격려한다</string>
+
+    <string name="sn_num2_title">한개 골라주세요        (7/20)</string>
+    <string name="sn_num2_string1">친구의 잘못은 지적해 주는 편이다</string>
+    <string name="sn_num2_string2">친구의 잘못을 지적해 주면 친구가 어떻게 생각할까 걱정이 돼서 말하지 않는 편이다</string>
+
+    <string name="sn_num3_title">한개 골라주세요        (8/20)</string>
+    <string name="sn_num3_string1">도둑질을 한 사람은 벌을 받아야 한다</string>
+    <string name="sn_num3_string2">도둑질을 한 사람은 도둑질을 하지 않도록 도움을 받아야 한다</string>
+
+    <string name="sn_num4_title">한개 골라주세요        (9/20)</string>
+    <string name="sn_num4_string1">나는 똑똑한 사람으로 \n기억되고 싶다</string>
+    <string name="sn_num4_string2">나는 따뜻한 사람으로 \n기억되고 싶다</string>
+
+    <string name="sn_num5_title">한개 골라주세요        (10/20)</string>
+    <string name="sn_num5_string1">벌금을 받을 때는 규칙대로 정확하게 받아야 한다</string>
+    <string name="sn_num5_string2">벌금을 받을 때는 상황에 따라 그 사람의 사정을 고려해서 받아야 한다</string>
+
+    <string name="tf_num1_title">한개 골라주세요        (11/20)</string>
+    <string name="tf_num1_string1">해야 할 일을 먼저 하고 논다</string>
+    <string name="tf_num1_string2">할 수 있는 일이라면 먼저 놀고 난 후에 해도 괜찮다</string>
+
+    <string name="tf_num2_title">한개 골라주세요        (12/20)</string>
+    <string name="tf_num2_string1">하기 쉽게 잘 짜여진 \n숙제를 선호한다</string>
+    <string name="tf_num2_string2">새로운 방법으로 하는\n숙제를 선호한다</string>
+
+    <string name="tf_num3_title">한개 골라주세요        (13/20)</string>
+    <string name="tf_num3_string1">자전거를 탈 때 목적지를 \n미리 생각하고 탄다</string>
+    <string name="tf_num3_string2">자전거를 탈 때 달리고 나서 목적지를 생각한다</string>
+
+    <string name="tf_num4_title">한개 골라주세요        (14/20)</string>
+    <string name="tf_num4_string1">무엇을 공부해야 할지 자세히 가르쳐 주시는 선생님</string>
+    <string name="tf_num4_string2">스스로 공부할 것을 선택하도록 맡기시는 선생님</string>
+
+    <string name="tf_num5_title">한개 골라주세요        (15/20)</string>
+    <string name="tf_num5_string1">게임의 규칙은 \n절대로 바뀌어서는 안된다</string>
+    <string name="tf_num5_string2">게임의 규칙은 \n경우에 따라 바뀔 수 있다</string>
+
+    <string name="istj_detail">당신은 약속을 중시하는 경향이며\n허세나 과장이 없으며\n조용하고 과묵한 성격이군요!\n\n조지워싱턴</string>
+    <string name="isfj_detail">당신은 안정적인 삶을 추구하며\n예측이 가능한 일을 선호하며\n참을성이 높군요!\n\n마더테레사</string>
+    <string name="infj_detail">당신은 결단력이 있으며\n상상력과 창의력이 뛰어나며\n다소 고집스런 면도 있군요!\n\n간디</string>
+    <string name="intj_detail">당신은 자신감이 높으몀\n아는 것이 많은 편이며\n계획을 세우는 것을 좋아하는군요!\n\n앨론머스크</string>
+
+    <string name="istp_detail">당신은 손재주가 좋으며\n승부를 좋아하며\n이론보단 직접 배우는것을 선호하느군요!\n\n톰크루즈</string>
+    <string name="isfp_detail">당신은 따뜻한 마음을 가졌으며\n자유로운것을 선호하며\n외로움을 쉽게 느끼는군요!\n\n마이클잭슨</string>
+    <string name="infp_detail">당신은 로맨틱하며\n타인의 표정을 잘 읽으며\n인간관계에 있어 방어적이군요!\n\n잔다르크</string>
+    <string name="intp_detail">당신은 매우 객관적이며\n경험보단 이론을 추구하며\n호기심이 많은 사람이군요!\n</string>
+
+    <string name="estp_detail">당신은 항상 에너지가 넘치며\n현재에 충실하며\n언제나 긍정적인 사람이군요!\n\n마돈나</string>
+    <string name="esfp_detail">당신은 타고난 엔터테니어이며\n뜨거운 열정을 가지고 있으며\n상대에게 굉장히 관대하군요!\n\n엘비스 프레슬리</string>
+    <string name="enfp_detail">당신은 독보적인 카리스마가 있으며\n다방면에서 다재다능하며\n소문을 믿는 편이군요!\n\n월트디즈니</string>
+    <string name="entp_detail">당신은 두뇌회전이 빠른편이며\n임기응변이 뛰어나며\n목적을 가장 중요시 하는군요!\n\n톰행크스</string>
+
+    <string name="estj_detail">당신은 자신의 감정을 잘 표현하며\n부지런한 편이며\n책임감이 있는 사람이군요!\n\n마가렛대처</string>
+    <string name="esfj_detail">당신은 우정을 중요시 여기며\n타인의 의견을 중시하며\n칭찬을 정말 좋아하는군요!\n\n타이라뱅크스</string>
+    <string name="entj_detail">당신은 냉정하게 판단하는 편이며\n도전정신이 강하고\n자신의 경험을 중시하는군요!\n\n나폴레옹</string>
+    <string name="enfj_detail">당신은 타고난 달변가이며\n타인의 성장에 관심이 많으며\n타인의 감정에 민감하군요!\n\n마틴루터킹</string>
+    <string name="bkr_intro">안녕하세요 저는 방경림입니다\n수원시 영통구에 살고있으며\n피아노와 루미큐브를 잘합니다\n생일은 11월 21일이며\n1998년생입니다\n3개월이 30년이 되도록\n열심히 하겠습니다\n잘 부탁드립니다~</string>
+    <string name="hsj_intro">안녕하세요 저는 하수진입니다\n강남구 역삼동에 살고있으며\n영화, 음악감상 및 사진찍는것을 좋아합니다\n생일은 8월 24일이며\n1997년생입니다\n끊임없이 배워서 꾸준히\n성장할 수 있는 코오롱인이\n되겠습니다\n감사합니다~</string>
+    <string name="kjy_intro">안녕하세요 저는 구자윤입니다\n저는 동작구 상도동에 살고있으며\n웹툰, 브이로그 보는것을 좋아합니다\n생일은 2월 9일이며\n1997년생입니다\n2021년 새해에 인턴으로\n입사하게 되어서 행복합니다\n열심히 하겠습니다~</string>
+    <string name="sdy_intro">안녕하세요 저는 성도연입니다\n저는 동작구 노량진동에 살고있으며\n여행다니는것과 스페인어 공부를 좋아합니다\n생일은 8월 8일이며\n1995년생입니다\n인턴기간동안 최선을 다해\n열심히 하겠습니다~</string>
+    <string name="pht_intro">안녕하세요 저는 박현태입니다\n저는 중락구 묵동에 살고있으며\n축구와 영화감상이 취미입니다\n생일은 5월 16일이며\n1996년생입니다\n항상 밝은 모습과\n긍정적인 마음으로\n열심히 배우겠습니다~</string>
+    <string name="jjh_intro">안녕하세요 저는 조장현입니다\n저는 관악구 신림동에 살고있으며\n3대운동과 낚시가 취미입니다\n생일은 6월 24일이며\n1994년생입니다\n신속히 적응하여\n회사가 필요로 하는\n모습 보여드리겠습니다\n감사합니다~</string>
+    <string name="lss_intro">안녕하세요 저는 이승수입니다\n저는 양천구 신정동에 살고있으며\n주짓수와 음악감상이 취미입니다\n생일은 8월 2일이며\n1996년생입니다\n열심히 하는 사람보단\n잘하는 사람이 되도록\n많이 노력하겠습니다~</string>
+    <string name="lhb_intro">안녕하세요 저는 이혜빈입니다\n저는 동작구 사당동에 살고 있으며\n등산과 퍼즐이 취미입니다\n생일은 3월 22일이며\n1995년생입니다\n회사에 영감을 주는\n직원이 되도록 하겠습니다~</string>
+    <string name="hwk_intro">안녕하세요 저는 함운경입니다\n저는 광진구 자양동에 살고있으며\n축구와 게임이 취미입니다\n생일은 11월28일이며\n1994년생입니다\n초심을 잃지 않고\n꾸준히 배우고 노력하는\n신입사원이 되겠습니다~</string>
+    <string name="kjh_intro">안녕하세요 저는 김정훈입니다\n저는 용인시 수지구에 살고있으며\n푹살과 노래부르는것이 취미입니다\n생일은 3월 3일이며\n1993년생입니다\n인턴기간동안\n열심히 배우겠습니다~</string>
+    <string name="sjw_intro">안녕하세요 저는 심재욱입니다\n저는 송파구 잠실동에 살고있으며\n헬스와 자전거 타는것이 취미입니다\n생일은 6월 14일이며\n1994년생입니다\n항상 밝은 모습으로\n최선을 다하겠습니다~</string>
+    <string name="ldy_intro">안녕하세요 저는 이다연입니다\n저는 노원구 월계동에 살고있으며\n산책과 독서가 취미입니다\n생일은 1월 13일이며\n1999년생입니다\n열심히 많이 배워서\n코오롱베니트에 녹아들 수\n있는 인턴이 되겠습니다~</string>
+    <string name="kkr_intro">안녕하세요 저는 김규리입니다\n저는 성북구 성북동에 살고있으며\n산책과 넷플릭스시청이 취미입니다\n생일은 5월 26일이며\n1996년생입니다\n항상 배우는 자세로\n성실하게 업무에\n임하겠습니다~</string>
+    <string name="msh_intro">안녕하세요 저는 문소희입니다\n저는 광진구 구의동에 살고있으며\n영화감상과 필름사진 촬영이 취미입니다\n생일은 2월 20일이며\n1998년생입니다\n인턴기간동안\n열심히 잘 하겠습니다\n감사합니다~</string>
+
+
+</resources>

@@ -13,10 +13,21 @@
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Title"
+        android:text="나! 누구게~"
         android:gravity="center_horizontal|top"
         android:textSize="50dp"
         android:id="@+id/main_title"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textSize="20dp"
+        android:gravity="right"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/green"
+        android:textStyle="bold"
+        android:id="@+id/target_name_text"
         />
     <TextView
         android:textColor="@color/black"
@@ -31,6 +42,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="450dp"
+        android:id="@+id/main_scrollview"
         >
         <FrameLayout
             android:background="@color/white"

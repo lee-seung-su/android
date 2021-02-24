@@ -91,6 +91,7 @@ class QuizType1 : Fragment() {
         checkBox3 = view.findViewById(R.id.checkbox_3)
         checkBox4 = view.findViewById(R.id.checkbox_4)
         nextButton = view.findViewById(R.id.quiz_next_button)
+        mainActivity!!.quizInd++
     }
     fun check():Boolean{
         flag1 = checkBox1.isChecked()

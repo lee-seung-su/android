@@ -37,13 +37,13 @@
         android:textSize="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="다른사람"
-        android:id="@+id/another_person_button"
+        android:text="성향 알아보기"
+        android:id="@+id/tendency_button"
         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="처음으로"
+        android:text="메뉴선택"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:textSize="30dp"

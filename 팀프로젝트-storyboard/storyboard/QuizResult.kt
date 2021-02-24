@@ -22,7 +22,7 @@ private const val ARG_PARAM2 = "param2"
  */
 class QuizResult : Fragment(),View.OnClickListener {
     lateinit var samePersonAgainButton : Button
-    lateinit var anotherPersomButton : Button
+    lateinit var tendencyButton : Button
     lateinit var quizHomeButton : Button
     var mainActivity : MainActivity ?= null
     override fun onCreateView(
@@ -38,12 +38,12 @@ class QuizResult : Fragment(),View.OnClickListener {
     }
     fun init(view : View){
         samePersonAgainButton = view.findViewById(R.id.quiz_again_button)
-        anotherPersomButton = view.findViewById(R.id.another_person_button)
+        tendencyButton = view.findViewById(R.id.tendency_button)
         quizHomeButton = view.findViewById(R.id.quiz_home_button)
     }
     fun listen(){
         samePersonAgainButton.setOnClickListener(this)
-        anotherPersomButton.setOnClickListener(this)
+        tendencyButton.setOnClickListener(this)
         quizHomeButton.setOnClickListener(this)
     }
     override fun onAttach(context: Context) {
@@ -62,8 +62,8 @@ class QuizResult : Fragment(),View.OnClickListener {
                 trans.addToBackStack("quiz Result")
                 trans.commit()
             }
-            R.id.another_person_button ->{
-                var next = ChoosePeople()
+            R.id.tendency_button ->{
+                var next = CheckTendency()
                 var trans = mainActivity!!.supportFragmentManager.beginTransaction()
                 trans.hide(this)
                 trans.add(R.id.frame_layout,next)
@@ -73,10 +73,19 @@ class QuizResult : Fragment(),View.OnClickListener {
                 trans.commit()
             }
             R.id.quiz_home_button ->{
+                var next : SelectMenu = SelectMenu()
+                var trans = mainActivity!!.supportFragmentManager.beginTransaction()
+                trans.add(R.id.frame_layout, next)
+                trans.addToBackStack("Today Match Result")
+                trans.hide(this)
+                trans.commit()
+                /*
                 var intent = Intent(mainActivity, MainActivity::class.java)
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
                 startActivity(intent)
                 mainActivity!!.finish()
+
+                 */
 
             }
         }

@@ -7,38 +7,57 @@
     tools:context=".Identify">
 
     <TextView
-        android:textColor="@color/black"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="당신은 누구입니까?"
-        android:textSize="30dp"
-        android:gravity="center_horizontal"
         android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        />
+        android:gravity="center_horizontal"
+        android:text="당신은 누구입니까?"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingBottom="30dp"
-        >
-        <Spinner
-            android:background="@color/green"
-            android:layout_marginLeft="30dp"
-            android:layout_gravity="top"
-            android:layout_marginTop="30dp"
-            android:layout_width="200dp"
+        android:paddingBottom="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/who_am_i_spinner"
-            />
+            android:orientation="vertical"
+
+            >
+            <Spinner
+                android:id="@+id/what_is_my_team_spinner"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="30dp"
+                android:background="@color/green"
+                android:layout_marginTop="30dp" />
+
+            <EditText
+
+                android:inputType="text"
+                android:id="@+id/who_am_i_edit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:hint="이름을 입력하세요"
+                android:textSize="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/green" />
+        </LinearLayout>
+
         <Button
-            android:layout_marginLeft="40dp"
+            android:id="@+id/identify_enter_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:text="Enter"
-            android:id="@+id/who_am_i_enter_button"
-            />
+            android:layout_marginLeft="40dp"
+            android:text="Enter" />
     </LinearLayout>
 
 

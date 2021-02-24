@@ -58,6 +58,11 @@ class QuizStart : Fragment() {
         }
         return view
     }
+    fun quizValueInit(){
+        mainactivity!!.quizFlag = 1
+        mainactivity!!.tendencyFlag = 0
+        mainactivity!!.quizInd = 0
+    }
     fun init(view:View){
         quizStartButton = view.findViewById(R.id.quiz_start_button)
     }
