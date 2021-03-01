@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/dog_run3"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/dog_run4"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/dog_run5"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/dog_run6"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/dog_run7"
+        android:duration="200"/>
+    <item
+        android:drawable="@drawable/dog_run8"
+        android:duration="200"/>
+</animation-list>

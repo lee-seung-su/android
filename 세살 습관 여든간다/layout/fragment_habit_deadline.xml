@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/pink"
+    tools:context=".HabitDeadLine">
+    <TextView
+        android:id="@+id/habit_deadline_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="목표기한을 설정하세요"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/habit_deadline_question"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="목표 기한"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:clickable="true"
+            android:id="@+id/habit_d_day_answer"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="D-80"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:textSize="20dp" />
+
+        <TextView
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/habit_date_answer_from"
+            android:hint="2020-02-18"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:visibility="gone"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="-"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/habit_date_answer_between"
+            android:gravity="center_vertical"
+            />
+        <TextView
+            android:visibility="gone"
+            android:clickable="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/light_gray"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/habit_date_answer_to"
+            android:hint="2020-02-18"
+            android:gravity="center_vertical"
+            />
+
+        <RadioGroup
+            android:id="@+id/deadline_radio_group"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:textColor="@color/black"
+                android:checked="true"
+                android:text="D-day타입"
+                android:id="@+id/deadline_type_d_day"
+                android:layout_width="100dp"
+                android:layout_height="30dp" />
+            <RadioButton
+                android:textColor="@color/black"
+                android:id="@+id/deadline_type_date"
+                android:text="Date타입"
+                android:layout_width="100dp"
+                android:layout_height="30dp" />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/habit_goal_title"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="목표율을 설정하세요"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="90dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="목표율"
+            android:id="@+id/habit_goal_question"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            />
+        <EditText
+
+            android:layout_marginLeft="20dp"
+            android:gravity="right"
+            android:id="@+id/habit_goal_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:hint="80"
+            android:textColorHint="@color/light_gray"
+            android:textColor="@color/black"
+            android:textSize="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="%"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+
+    <Button
+        app:cornerRadius="10dp"
+        android:id="@+id/habit_goal_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:backgroundTint="@android:color/secondary_text_light"
+        android:text="다음으로" />
+
+    <Button
+        app:cornerRadius="10dp"
+        android:id="@+id/habit_goal_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@android:color/secondary_text_light"
+        android:text="뒤로가기" />
+
+
+</LinearLayout>

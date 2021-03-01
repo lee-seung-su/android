@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ShowHabit">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:background="@color/light_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/habit_recycler_view"
+        />
+
+    <TextView
+        android:id="@+id/show_habit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="120dp"
+        android:text="등록된 습관이 없습니다.\n새로운 습관을 만들어볼까요?"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.543"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/habit_recycler_view" />
+
+    <Button
+        android:id="@+id/show_habit_add_button"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@android:color/secondary_text_light"
+        android:text="+ 나만의 습관 추가"
+
+        android:textSize="18dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/show_habit_title" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/efab2"
+        android:visibility="invisible"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/efab1"
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:text="자주 쓰는 습관"
+        android:gravity="center"
+        android:backgroundTint="@color/light_blue_200"
+        android:src="@android:drawable/ic_input_add" />
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/efab3"
+            android:visibility="invisible"
+            android:layout_marginTop="250dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/efab2"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="습관 추가"
+            android:gravity="center"
+            android:backgroundTint="@color/light_blue_200"
+            android:src="@android:drawable/ic_input_add" />
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fab"
+            android:visibility="invisible"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:id="@+id/efab3"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:text="스톱 워치"
+            android:backgroundTint="@color/light_blue_200"
+            android:src="@android:drawable/ic_input_add" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/plus" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
